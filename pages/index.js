@@ -31,18 +31,20 @@ function ProfileRelationsBox(propriedades) {
         <ProfileRelationsBoxWrapper>
           <h2 className="smallTitle">
             {propriedades.title} ({propriedades.items.length})
+            {console.log(propriedades.items)}
           </h2>
           <ul>
-            {/* {seguidores.map((itemAtual) => {
+            {
+            propriedades.items.map((itemAtual) => {
               return (
                 <li key={itemAtual}>
-                  <a href={`https://github.com/${itemAtual}.png`}>
-                    <img src={itemAtual.image} />
-                    <span>{itemAtual.title}</span>
+                  <a>
+                    <img src={itemAtual.avatar_url} />
+                    <span>{itemAtual.login}</span>
                   </a>
                 </li>
               )
-            })} */}
+            })}
           </ul>
         </ProfileRelationsBoxWrapper>
     )
@@ -52,13 +54,14 @@ export default function Home(props) {
   const usuarioAleatorio = props.githubUser
   const [comunidades, setComunidades] = React.useState([]);
   const pessoasFavoritas = [
-    'brnofranco', 
+    'omariosouto', 
+    'peas', 
+    'juunegreiros',
     'leonardomleitao', 
-    'madrigueira', 
-    'guhma',
-    'vitorpinheiro29',
-    'lucasgabrielmello',
-    'rafaballerini'
+    'rafaballerini',
+    'maykbrito', 
+    'filipedeschamps', 
+    'vitorpinheiro29', 
   ]
 
   // 0 - Pegar o array de dados do github
@@ -92,7 +95,6 @@ const [seguidores, setSeguidores] = React.useState([]);
     .then((response) => response.json())
     .then((respostaCompleta) => {
       const comunidadesVindasDoDato = respostaCompleta.data.allCommunities
-      console.log(comunidades)
       setComunidades(comunidadesVindasDoDato)
     })
 
@@ -138,7 +140,6 @@ const [seguidores, setSeguidores] = React.useState([]);
               })
               .then(async (response) => {
                 const dados = await response.json();
-                console.log(dados.registroCriado);
                 const comunidade = dados.registroCriado
                 const comunidadesAtualizadas = [...comunidades, comunidade]
                 setComunidades(comunidadesAtualizadas)
@@ -229,7 +230,6 @@ export async function getServerSideProps(context) {
   })
   .then((resposta) => resposta.json())
 
-  console.log('isAuthenticated', isAuthenticated);
 
   if(!isAuthenticated) {
     return {

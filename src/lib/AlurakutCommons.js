@@ -2,6 +2,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import NextLink from 'next/link';
 
+import Image from 'next/image';
+
 const BASE_URL = 'http://alurakut.vercel.app/';
 const v = '1';
 
@@ -24,7 +26,8 @@ export function AlurakutMenu({ githubUser }) {
   return (
     <AlurakutMenu.Wrapper isMenuOpen={isMenuOpen}>
       <div className="container">
-        <AlurakutMenu.Logo src={`${BASE_URL}/logo.svg`} />
+        <AlurakutMenu.Logo src="kitkut-logo.png" />
+        
 
         <nav style={{ flex: 1 }}>
           {[{ name: 'Inicio', slug: '/'}, {name: 'Amigos', slug: '/amigos'}, {name: 'Comunidades', slug: '/comunidades'}].map((menuItem) => (
@@ -54,7 +57,7 @@ export function AlurakutMenu({ githubUser }) {
 }
 AlurakutMenu.Wrapper = styled.header`
   width: 100%;
-  background-color: #308BC5;
+  background-color: #000000;
   .alurakutMenuProfileSidebar {
     background: white;
     position: fixed;
@@ -93,12 +96,13 @@ AlurakutMenu.Wrapper = styled.header`
     }
   }
   .container {
-    background-color: #308BC5;
+    background-color: #000000;
     padding: 7px 16px;
     max-width: 1110px;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: relative;
     z-index: 101;
     @media(min-width: 860px) {
@@ -126,7 +130,7 @@ AlurakutMenu.Wrapper = styled.header`
         text-decoration: none;
         &:after {
           content: " ";
-          background-color: #5292C1;
+          background-color: #25F4EE;
           display: block;
           position: absolute;
           width: 1px;
@@ -139,27 +143,27 @@ AlurakutMenu.Wrapper = styled.header`
       }
     }
     input {
-      color: #ffffff;
-      background: #5579A1;
+      color: #000000;
+      background: #FFFFFF;
       padding: 10px 42px;
       border: 0;
-      background-image: url(${`${BASE_URL}/icons/search.svg`});
+      background-image: url('/search.svg');
       background-position: 15px center;
       background-repeat: no-repeat;
-      border-radius: 1000px;
+      border-radius: 6px;
       font-size: 12px;
       ::placeholder {
-        color: #ffffff;
+        color: #000000;
         opacity: 1;
       }
     } 
   }
 `;
 AlurakutMenu.Logo = styled.img`
-  background-color: #ffffff;
+  //background-color: #ffffff;
   padding: 9px 14px;
-  border-radius: 1000px;
-  height: 34px;
+  //border-radius: 1000px;
+  height: 48px;
 `;
 
 function AlurakutMenuProfileSidebar({ githubUser }) {
@@ -222,7 +226,7 @@ export function AlurakutProfileSidebarMenuDefault() {
 AlurakutProfileSidebarMenuDefault.Wrapper = styled.div`
   a {
     font-size: 12px;
-    color: #2E7BB4;
+    color: #FFFFFF;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
@@ -461,14 +465,14 @@ export const AlurakutStyles = css`
     width: 8px;
   }
   *::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #0d0d0d; 
   }
   *::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #333; 
     border-radius: 10px;
   }
   *::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #4d4d4d; 
   }
   a,
   button {

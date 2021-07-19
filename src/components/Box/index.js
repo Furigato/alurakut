@@ -1,23 +1,29 @@
 import styled from 'styled-components';
 
 const Box = styled.div`
-  background: #FFFFFF;
+  color: white;
+  background: #000000;
   border-radius: 8px;
   padding: 16px;
   /* CSS Pré-Pronto */
   margin-bottom: 10px;
+  box-shadow: 1px 1px 0px #FE2C55, -1px -1px 0px #25F4EE;
   .boxLink {
     font-size: 14px;
-    color: #2E7BB4;
+    color: #fff;
     text-decoration: none;
     font-weight: 800;
+    text-shadow: 1px 1px 0px #FE2C55, -1px -1px 0px #25F4EE;
+    
   }
   .title {
+    text-shadow: 1px 1px 0px #FE2C55, -1px -1px 0px #25F4EE;
     font-size: 32px;
     font-weight: 400;
     margin-bottom: 20px;
   }
   .subTitle {
+    text-shadow: 1px 1px 0px #FE2C55, -1px -1px 0px #25F4EE;
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 20px;
@@ -26,7 +32,7 @@ const Box = styled.div`
     margin-bottom: 20px;
     font-size: 16px;
     font-weight: 700;
-    color: #333333;
+    color: #FFFFFF;
     margin-bottom: 20px;
   }
   hr {
@@ -53,7 +59,8 @@ const Box = styled.div`
     padding: 8px 12px;
     color: #FFFFFF;
     border-radius: 10000px;
-    background-color: #6F92BB;
+    background-color: #000;
+    box-shadow: 2px 2px 0px #FE2C55, -2px -2px 0px #25F4EE;
   }
 `; 
 
