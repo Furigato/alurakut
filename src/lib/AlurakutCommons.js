@@ -423,6 +423,7 @@ const AlurakutLoginScreen = css`
           color: var(--colorPrimary);
         }
         input {
+          color: #FFFFFF;
           width: 100%;
           display: block;
           border: 1px solid var(--textQuarternaryColor);
