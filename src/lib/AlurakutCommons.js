@@ -324,14 +324,14 @@ OrkutNostalgicIconSet.List = styled.ul`
 // ================================================================================================================
 const AlurakutLoginScreen = css`
   :root {
-    --backgroundPrimary: #D9E6F6;
-    --backgroundSecondary: #F1F9FE;
-    --backgroundTertiary: #FFFFFF;
-    --backgroundQuarternary: #BBCDE8;
-    --colorPrimary: #2E7BB4;
+    --backgroundPrimary: #323232;
+    --backgroundSecondary: #191919;
+    --backgroundTertiary: #000000;
+    --backgroundQuarternary: #323232;
+    --colorPrimary: #25F4EE;
     --colorSecondary: #388BB0;
     --colorTertiary: #2F4A71;
-    --colorQuarternary: #D81D99;
+    --colorQuarternary: #FFFFFF;
     --textPrimaryColor: #333333;
     --textSecondaryColor: #FFFFFF;
     --textTertiaryColor: #5A5A5A;
@@ -372,6 +372,7 @@ const AlurakutLoginScreen = css`
         min-height: 368px;
       }
       p {
+        color: #FFFFFF;
         font-size: 12px;
         line-height: 1.2;
         &:not(:last-child) {
@@ -379,10 +380,11 @@ const AlurakutLoginScreen = css`
         }
         strong {
           color: var(--colorQuarternary);
+          text-shadow: 1px 1px 0px #FE2C55, -1px -1px 0px #25F4EE;
         }
       }
       img {
-        max-height: 45px;
+        max-height: 100px;
         margin-bottom: 36px;
       }
     }
@@ -392,6 +394,7 @@ const AlurakutLoginScreen = css`
       flex-wrap: wrap;
       flex-direction: column;
       .box {
+        color: #FFFFFF;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -430,17 +433,20 @@ const AlurakutLoginScreen = css`
           margin-bottom: 16px;
         }
         button {
+          margin-top: 10px;
           width: 100%;
           display: block;
           border: 0;
           padding: 12px;
           border-radius: var(--commonRadius);
-          background-color: var(--colorPrimary);
+          background-color: #000000;
           color: var(--textSecondaryColor);
+          box-shadow: 1px 1px 0px #FE2C55, -1px -1px 0px #25F4EE;
         }
       }
     }
     .footerArea {
+      color: #FFF;
       grid-area: footerArea;
       background-color: var(--backgroundQuarternary);
       border-radius: var(--commonRadius);
